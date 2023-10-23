@@ -88,7 +88,7 @@ All variables are assigned to a data type, be it a STRING, or an INTEGER.
 Values of the same type can be manipulated together.
 In Python, automatic type conversion, also known as implicit casting, allows the interpreter to automatically convert compatible data types, such as integers to floats or floats to strings, as needed during operations or assignments, simplifying code and enhancing flexibility.
 
-###Variables are fundamental to programming in Python and are used extensively to store and manipulate data within programs.
+### Variables are fundamental to programming in Python and are used extensively to store and manipulate data within programs.
 
 ## Concatenation and Operations with Variables:
 You can concatenate strings and perform various operations with numerical variables.
