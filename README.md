@@ -112,6 +112,14 @@ In Python, automatic type conversion, also known as implicit casting, allows the
 
 # Explicit Casting:
 A value cannot be automatically cast from one data type to another if it will result in data loss. Extra code has to be written to ensure that the value stays the same and only the data type changes; like when casting from a floating-point value to an integer value.
+## Example is :
+num1 = 15    #num1 variable is automatically assigned
+   #as an integer value
+num2 = "30"   #num2 variable is automatically assigned
+     #as a string value
+ans = num1 + num2   #ans is assigned to num1 added to num2
+print ("answer:", ans) #ans is printed
+
 
 # The rules to convert a string to a float are:
 
