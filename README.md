@@ -127,23 +127,24 @@ The string should only contain numbers.
 Other than numbers the following are allowed:
 Only one dot (.) character. Indicates the decimal starts after the dot (.) character. A ‘+’ or ‘−‘ character at the beginning of the string. This indicates that the number is either positive or negative.
 
-Day 3
-Three data types have already been used in the examples before. Now we shall have a more detailed look at the data types used in Python. Data types have different functions in a program. One of the most important factors to take into consideration is that the performance of a computer can be severely affected by choosing the wrong data type. a program might only need to use numbers between 1 and 20; it would therefore not make sense to use string variables to store these numbers in, as one will need to convert these strings back to numbers in order to perform calculations on them. This would create extra work for the computer, which means that the performance could degrade in larger programs. Therefore, one should rather define the variables as integers. ##Data Types to be covered:
+# Day 3
+Three data types have already been used in the examples before. Now we shall have a more detailed look at the data types used in Python. Data types have different functions in a program. One of the most important factors to take into consideration is that the performance of a computer can be severely affected by choosing the wrong data type. a program might only need to use numbers between 1 and 20; it would therefore not make sense to use string variables to store these numbers in, as one will need to convert these strings back to numbers in order to perform calculations on them. This would create extra work for the computer, which means that the performance could degrade in larger programs. Therefore, one should rather define the variables as integers. 
+## Data Types to be covered:
 
-Integers
-Booleans
-Floating point numbers
-Complex numbers
-Strings
-literals
-these are the representations of values in code. These values can be of different data types, such as integers, floating-point numbers, characters, strings, and boolean values. Literals are used to directly represent fixed values in the code without requiring computations or additional processing. Literals are fundamental building blocks in programming and are used to define constant values, initialize variables, and provide input data to programs. Literals are values that never change, i.e. they are a constant. Look at the following example:
+1. Integers
+2. Booleans
+3. Floating point numbers
+4. Complex numbers
+5. Strings
+6. literals
 
+These are the representations of values in code. These values can be of different data types, such as integers, floating-point numbers, characters, strings, and boolean values. Literals are used to directly represent fixed values in the code without requiring computations or additional processing. Literals are fundamental building blocks in programming and are used to define constant values, initialize variables, and provide input data to programs. Literals are values that never change, i.e. they are a constant. Look at the following example:
         #Interpreter
 print ("The answer: ", 5 + 2)
 
 The answer: 7
 
-common types of literals in programming:
+## common types of literals in programming:
 1. Integer Literals:
 Integer literals represent whole numbers. Examples: 0, 42, -17.
 
@@ -165,7 +166,7 @@ In some programming languages like Python, None represents the absence of a valu
 7. Hexadecimal and Octal Literals:
 Some programming languages allow the representation of integers in hexadecimal (base 16) or octal (base 8) notation. For example, in Python, 0x1A represents 26 in hexadecimal, and 0o34 represents 28 in octal.
 
-Examples in PYTHON
+## Examples in PYTHON
 Integer literals
 integer_literal = 42
 
@@ -184,21 +185,23 @@ boolean_literal = True
 None literal
 none_literal = None
 
-Data Types Examples Integers: These represent numbers in an unlimited range. This is only limited by a machine’s memory. Booleans: Evaluate to ‘True or False’, 1 or 0 respectively. Floating point numbers: Floating-point numbers represent double-precision numbers. Complex numbers: Complex numbers represent numbers as a pair of double-precision numbers. Strings: A sequence of Unicode characters e.g. a word or a sentence that can be manipulated.
+## \Data Types Examples Integers: T
+hese represent numbers in an unlimited range. This is only limited by a machine’s memory. Booleans: Evaluate to ‘True or False’, 1 or 0 respectively. Floating point numbers: Floating-point numbers represent double-precision numbers. Complex numbers: Complex numbers represent numbers as a pair of double-precision numbers. Strings: A sequence of Unicode characters e.g. a word or a sentence that can be manipulated.
 
-Itergers
+## Itergers
 Python has three distinctive numeric types; this means that for every number that you use in your programs there is a suitable data type that you will use to ensure that your programs are truly performance efficient.
 
 Python is a static language because only values of a certain type can be assigned to particular variables, according to their data types assigned.Integers are always whole numbers. Integers include negative and positive numbers. The only factor that determines the range of an integer variable is the amount of memory a machine has available.
 The four main operators used when doing calculations, are ‘+’, ‘-’, ‘*’, and ‘/’. There are more, but those will be discussed later in the course. The plus ‘+’ operator can be used universally, which means that you can use it for purposes other than to adding numbers together. The plus operator can also be used to concatenate strings. programs had fixed values that were used to get an output by manipulating the given data. In real life situations, almost all programs require some sort of input from the user to give accurate output. This is done by using the input() command.
 
-BOOLEANS
+## BOOLEANS
 The boolean data type has corresponding integer values. There are only two possible values that a Boolean variable can have, True (1) or False (0). When returning Booleans as strings they are seen as “True” and “False”, and never as “1” and “0”. True and False are case-sensitive in Python. Boolean tests whether conditions are valid or not. The three logical operators used to test conditions between two arguments are:
 
 The and-operator
 The or operator
 The not-operator
-The following variable values are considered False:
+
+## The following variable values are considered False:
 
 False
 None
@@ -209,12 +212,12 @@ All values returned otherwise are always considered true. This means that many o
 
 Operators and built-in functions that have a Boolean result always return (False or 0) or (True or 1). The Boolean or and and operations always return only one of the options, either True or False.
 
-FLOATING POINT NUMBERS
+## FLOATING POINT NUMBERS
 Floating point numbers are better known as floats. Float is the data type that manages numbers with decimal places with very accurate precision. The float data type can be called as a function with zero or 1 argument of any data type.
 
 If no argument is given, then float returns 0.0. If an argument is given, an attempt will then be made to convert the value to a float data type, but this does not mean it is always possible. For example, float("21.765") will be converted to a float, but float("FF909A") will raise an exception. A string value cast to a float must contain only numbers and only one occurrence of the dot (.) character. The following piece of code will clarify the statement.
 
-Complex numbers
+## Complex numbers
 The absolute value of a complex number is its magnitude (or modulus), defined as the theoretical distance between the coordinates (real,imag) of x and (0,0) (applying the Pythagorean theorem). Another way of thinking about it is that it can be used to calculate the distance from 0, if you walk 5 km left and then 10 km up: you will be 11.19 km from where you started, because Banner Complete = 11.185. Complex numbers are two numbers contained in a single variable. The first part of a complex number is the real part (float), and the second part is the imaginary part (float), assigned in this manner: complex(real, image). Imaginary numbers are real multiples of the imaginary unit, written with a suffix of j (J). The imaginary part is the square root of -1. Python has built-in support for complex numbers. The latter notation is written as follows: 4+8j.Complex numbers are used in Python to combine two numbers into one manageable number. The following example shows how complex numbers are used in a simple manner.
 
 a_comp = complex(4, 8) # defines a_comp complex number i1 = 5 i2 = 6 b_comp = complex(i1, i2) # complex(5, 6)
@@ -227,3 +230,57 @@ print (7+5j + 10+4j) # adds 7 + 10 and 5 + 4 separately.
 
 Using the ‘+=‘ operator with strings
 The ‘+=‘ operator adds values to an existing variable.
+# Strings
+Strings are represented by the immutable (unchangeable) str data type. Strings are a sequence of Unicode characters which form a single manageable string. The str data type can be called to create a string; when there is no argument supplied, it returns an empty string. s = str("") is the same as s = str(), when an argument is passed to the string method that is not a string value, it is passed as a string representation of the type supplied: s = str(17.2354), is the same as s = str("17.2354"). The string function is often used to convert other data types to strings.
+## Example: 
+
+print ("Please enter your name:")
+
+s_name = input(str())
+
+print ("Please enter your surname:")
+
+s_surname = input(str())
+
+print ("Please enter your current age")
+
+i_age = input(int())
+
+s = str(i_age)
+
+
+sentence = s_name + " " 
+
+sentence += s_surname + " is currently "
+
+sentence += s + " year(s) old" 
+
+
+print (sentence)
+
+OUTPUT
+Please enter your name:
+tshele
+Please enter your surname:
+molelekoa
+Please enter your current age
+046
+tshele molelekoa is currently 46 year(s) old
+
+## Using the ‘+=‘ operator with strings
+The ‘+=‘ operator adds values to an existing variable.
+​
+# Lambda Expressions
+Lambda expressions, also known as anonymous functions or lambda functions, are a concise way to create small, unnamed functions in programming languages. This function returns the sum of its two arguments: lambda a, b: a+b. Lambda functions can be used wherever function objects are required. Lambda expressions are powerful and flexible, but they should be used judiciously(with good judgment or sense.). For complex logic, it's often better to use named functions for the sake of readability and maintainability. Lambda functions are most suitable for simple operations and brief computations.
+ Lambda expressions are often used when you need a simple function for a short period of time and don't want to formally define a full function using the def keyword.
+
+## Syntax:
+lambda arguments: expression
+
+Here's a breakdown of the components:
+
+lambda keyword: Indicates that you're creating a lambda expression.
+arguments: Represents the input parameters of the lambda function. You can have zero or more arguments separated by commas.
+expression: Represents the computation that the lambda function performs. The result of this expression is implicitly returned from the lambda function.
+
+Like nested function definitions, lambda functions can reference variables from the containing scope
