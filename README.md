@@ -402,3 +402,41 @@ x *= 4  # Equivalent to x = x * 4, x is now 24
 python
 x /= 3  # Equivalent to x = x / 3, x is now 8.0 (float)
 These are the basic types of operators in Python. Understanding and mastering these operators are essential for writing effective and efficient Python programs.
+
+# WEEK 2
+## Control flow statements
+
+A program’s control flow is the order in which the program’s code executes.
+The control flow of a Python program is regulated by conditional statements, loops, and function calls.
+Python has three types of control structures:
+
+·         Sequential - default mode
+·         Selection - used for decisions and branching
+·         Repetition - used for looping, i.e., repeating a piece of code multiple times.
+
+1    1. Sequential
+Sequential statements are a set of statements whose execution process happens in a sequence. The problem with sequential statements is that if the logic has broken in any one of the lines, then the complete source code execution will break.
+
+a=20
+b=12
+c=a-b
+print("Subtraction is:", c)
+
+2. Selection/Decision control statements
+
+ In Python, the selection statements are also known as Decision control statements or branching statements.
+
+ The selection statement allows a program to test several conditions and execute instructions based on which condition is true.
+
+Some Decision Control Statements are:
+
+Simple if
+
+if-else
+
+nested if
+
+if-elif-else
+
+Simple if: If statements are control flow statements that help us to run a particular code, but only when a certain condition is met or satisfied. A simple if only has one condition to check.
+
