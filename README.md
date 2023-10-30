@@ -283,4 +283,122 @@ lambda keyword: Indicates that you're creating a lambda expression.
 arguments: Represents the input parameters of the lambda function. You can have zero or more arguments separated by commas.
 expression: Represents the computation that the lambda function performs. The result of this expression is implicitly returned from the lambda function.
 
-Like nested function definitions, lambda functions can reference variables from the containing scope
+Like nested function definitions, lambda functions can reference variables from the containing scope.
+
+# Day 4 Operators
+
+operators are special symbols or keywords used to perform operations on variables and values. There are several types of operators in Python, including arithmetic operators, comparison operators, logical operators, assignment operators, and more. Let's go through each type of operator with examples:
+1. Arithmetic Operators:
+Arithmetic operators are used to perform mathematical operations.
++ (Addition): Adds two operands.
+
+python
+
+result = 5 + 3  # Result will be 8
+- (Subtraction): Subtracts the right operand from the left operand.
+
+python
+
+result = 7 - 2  # Result will be 5
+* (Multiplication): Multiplies two operands.
+
+python
+result = 4 * 6  # Result will be 24
+/ (Division): Divides the left operand by the right operand (always results in a float).
+
+python
+
+result = 10 / 3  # Result will be 3.3333...
+// (Floor Division): Divides and rounds down to the nearest integer.
+
+python
+
+result = 10 // 3  # Result will be 3
+% (Modulus): Returns the remainder of the division.
+
+python
+Copy code
+result = 10 % 3  # Result will be 1
+** (Exponentiation): Raises the left operand to the power of the right operand.
+
+python
+
+result = 2 ** 3  # Result will be 8
+2. Comparison Operators:
+Comparison operators are used to compare values.
+
+== (Equal): Checks if the values of two operands are equal.
+
+python
+
+result = 5 == 5  # Result will be True
+!= (Not Equal): Checks if the values of two operands are not equal.
+
+python
+
+result = 5 != 3  # Result will be True
+> (Greater Than): Checks if the left operand is greater than the right operand.
+
+python
+
+result = 7 > 4  # Result will be True
+< (Less Than): Checks if the left operand is less than the right operand.
+
+python
+
+result = 2 < 6  # Result will be True
+>= (Greater Than or Equal To): Checks if the left operand is greater than or equal to the right operand.
+
+python
+
+result = 4 >= 4  # Result will be True
+<= (Less Than or Equal To): Checks if the left operand is less than or equal to the right operand.
+
+python
+
+result = 3 <= 5  # Result will be True
+3. Logical Operators:
+Logical operators are used to combine conditional statements.
+
+and: Returns True if both statements are true.
+
+python
+Copy code
+result = (5 > 3) and (4 < 6)  # Result will be True
+or: Returns True if one of the statements is true.
+
+python
+
+result = (5 > 3) or (4 > 6)  # Result will be True
+not: Reverse the result, returns False if the result is true.
+
+python
+
+result = not (5 > 3)  # Result will be False
+4. Assignment Operators:
+Assignment operators are used to assign values to variables.
+
+= (Assignment): Assigns the value of the right operand to the left operand.
+
+python
+
+x = 5  # x is now 5
++= (Add and Assign): Adds the right operand to the left operand and assigns the result to the left operand.
+
+python
+
+x += 3  # Equivalent to x = x + 3, x is now 8
+-= (Subtract and Assign): Subtracts the right operand from the left operand and assigns the result to the left operand.
+
+python
+
+x -= 2  # Equivalent to x = x - 2, x is now 6
+*= (Multiply and Assign): Multiplies the left operand by the right operand and assigns the result to the left operand.
+
+python
+x *= 4  # Equivalent to x = x * 4, x is now 24
+/= (Divide and Assign): Divides the left operand by the right operand and assigns the result to the left operand.
+
+python
+x /= 3  # Equivalent to x = x / 3, x is now 8.0 (float)
+These are the basic types of operators in Python. Understanding and mastering these operators are essential for writing effective and efficient Python programs.
