@@ -422,7 +422,7 @@ b=12
 c=a-b
 print("Subtraction is:", c)
 
-2. Selection/Decision control statements
+## 2. Selection/Decision control statements
 
  In Python, the selection statements are also known as Decision control statements or branching statements.
 
@@ -439,4 +439,21 @@ nested if
 if-elif-else
 
 Simple if: If statements are control flow statements that help us to run a particular code, but only when a certain condition is met or satisfied. A simple if only has one condition to check.
+
+## 2.   Repetition
+ 
+A repetition statement is used to repeat a group(block) of programming instructions.
+
+In Python, we generally have two loops/repetitive statements:
+
+for loop
+
+while loop
+
+for loop: A for loop is used to iterate over a sequence that is either a list, tuple, dictionary, or a set. We can execute a set of statements once for each item in a list, tuple, or dictionary.
+
+while loop: In Python, while loops are used to execute a block of statements repeatedly until a given condition is satisfied. Then, the expression is checked again and, if it is still true, the body is executed again. This continues until the expression becomes false.
+
+
+
 
