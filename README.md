@@ -404,6 +404,7 @@ x /= 3  # Equivalent to x = x / 3, x is now 8.0 (float)
 These are the basic types of operators in Python. Understanding and mastering these operators are essential for writing effective and efficient Python programs.
 
 # WEEK 2
+# Day 1
 ## Control flow statements
 
 A program’s control flow is the order in which the program’s code executes.
@@ -453,6 +454,151 @@ while loop
 for loop: A for loop is used to iterate over a sequence that is either a list, tuple, dictionary, or a set. We can execute a set of statements once for each item in a list, tuple, or dictionary.
 
 while loop: In Python, while loops are used to execute a block of statements repeatedly until a given condition is satisfied. Then, the expression is checked again and, if it is still true, the body is executed again. This continues until the expression becomes false.
+
+# GRADED ACTIVITY
+1.Using two for loops, write a program that produces the following output:
+
+>>>
+
+1 2 3
+
+4 5 6
+
+7 8 9
+>>>
+# Using two for loops to create the specified pattern
+for i in range(1, 10, 3):
+    for j in range(i, i + 3):
+        print(j, end=" ")
+    print()
+In the outer loop, the variable i takes values 1, 4, and 7, and in the inner loop, the variable j takes values from i to i + 3, printing the numbers in each row. The end=" " argument in the print function is used to separate the numbers with spaces instead of newlines.
+2.   Input in a number representing a car type, until the number 0 is input. There are three types of cars: 1 = luxury, 2 = commercial, 3 = sedan. Count how many of each type there are and print out this total with a message stating what type of car it is.
+# Initialize counters for each car type
+luxury_count = 0
+commercial_count = 0
+sedan_count = 0
+
+# Infinite loop to take car type input until 0 is entered
+while True:
+    car_type = int(input("Enter car type (1 for luxury, 2 for commercial, 3 for sedan, 0 to stop): "))
+    
+    # Check if input is 0 to break the loop
+    if car_type == 0:
+        break
+    
+    # Update counters based on car type
+    if car_type == 1:
+        luxury_count += 1
+    elif car_type == 2:
+        commercial_count += 1
+    elif car_type == 3:
+        sedan_count += 1
+    else:
+        print("Invalid car type. Please enter 1, 2, 3, or 0.")
+        continue
+
+# Print the total counts for each car type
+print(f"Total luxury cars: {luxury_count}")
+print(f"Total commercial cars: {commercial_count}")
+print(f"Total sedan cars: {sedan_count}")
+
+the while True loop continues indefinitely until the user enters 0. Inside the loop, the program asks for car type input, updates the corresponding counters based on the input, and if an invalid input is given, it prompts the user to enter a valid car type. When the user enters 0, the loop breaks, and the program prints the total counts for each car type.
+
+3.  Write a program that contains a while loop. Use a variable to count the number of iterations and print out this value each time. After the fifth iteration, the loop should stop and exit. Use the break statement.
+   
+# Initialize a variable to count the number of iterations
+iteration_count = 0
+
+# Start a while loop
+while True:
+    # Increment the iteration count
+    iteration_count += 1
+    
+    # Print the current iteration count
+    print(f"Iteration {iteration_count}")
+    
+    # Check if the fifth iteration is reached, then exit the loop
+    if iteration_count == 5:
+        print("Reached fifth iteration. Exiting the loop.")
+        break
+
+
+The while True loop runs indefinitely until it encounters the break statement inside the loop when iteration_count becomes equal to 5. The program prints the current iteration count at each step. When the fifth iteration is reached, it prints a message and exits the loop.
+# Day 2
+
+## Using Functions
+We create functions by providing three pieces of information. The name of the function, a list of zero or more parameters, and, optionally, a block of code which provides the return value (a function can return nothing).
+
+We normally define functions in script files for the simple reason that we do not want to type them more than once, we just want to edit a function (if necessary).
+
+We must make a firm distinction between an argument value and a parameter:
+
+·         Argument
+
+The argument is the object used in an application of a function; it may be referenced by other variables or objects.
+
+·         Parameter
+
+The parameter is a variable name that is part of the function and is a local variable within the function body.
+We define a function by using the following syntax:
+
+def function_name(parameter <,...>):
+
+#suite
+The function_name part is the name used to call a function. The parameter part shows that zero or more parameters can be given to a function. The suite part is where the functionality is coded.
+The first line of a function’s suite should always be a comment. This comment must briefly explain what the function does.
+
+When the return statement is included in the function’s suite, it means that the function returns a result, for example a calculated value. The return statement can also be used to break out of a function.
+There are three types of functions in Python:
+Ordinary functions
+Procedure functions
+Factory functions
+
+Ordinary functions are functions that follow mathematical procedures. They will receive an argument, perform a specific calculation with the argument, and return a result.
+Procedure functions normally do not return a result; they are called to execute a procedure. For example a function can be created to set up a connection to a database.
+Factory functions do not take parameters. The function generates values. Some factory functions work by accessing an object encapsulated in a module. For example, you will access the random number generator encapsulated in the random module.
+
+The following is an example of how programs use functions to be more efficient:
+Example 1 – Function:
+
+def calculateTax(salary):
+
+  """Calculates and prints a given salary’s tax"""
+
+  if salary > 30000 :
+
+    rate = 0.2
+
+  elif salary > 10000 :
+
+    rate = 0.15
+
+  else:
+
+    rate = 0.1
+
+  tax = salary * rate
+
+  print (tax)
+print ("Enter the amount on which you want to calculate tax:")
+
+calculateTax(int(input()));
+
+Notice that the function must be defined before it can be called. The program is divided into two separate programs: the main program and the calculateTax function are separate pieces of code. Each time calculateTax() is called, it will run through the function’s piece of code.
+The rate and tax variables are only accessible in the calculateTax function itself; you cannot use or access them outside of calculateTax. The variables rate, tax, and salary are known as local variables, because they are local to the function in which they are declared and cannot be accessed by other functions.
+If we want the value of a local variable to be available in another part of the application, one way of doing this is to return the value to the program or function which called it. For example, if we want the value of the tax variable to be available in the main program, we can use a return statement to accomplish this. Remember that it is only the value of the variable that is being returned and not the variable itself.
+
+Example 2 – Default parameters:
+1 x = 15
+def num(y = x):
+"""This function assigns a default value to y"""
+return y
+7 x = 5             #Reassign 'x' to 5.
+print (num())     #Returns 15 (default value not changed)
+
+Using default parameters in functions has one advantage. You would automatically assign a default value to a parameter within a function. The default value would only be used if a function call does not include a specific parameter’s value; the parameter would then take the default value that was specified in the function’s declaration.
+
+The above example assigns 15 to the x variable. A function is then declared called num. The num function has only one parameter (y), which has a default value of 15. Line 7 changes the value of x to 5. This change would not affect the default value of y, because num has already been declared. Line 8 would then thus print 15.
 
 
 
