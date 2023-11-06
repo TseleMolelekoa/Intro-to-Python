@@ -855,6 +855,61 @@ This section introduces various regex flags and their functions in Python. The k
 In summary, this section covers the use of regex flags, specifically the IGNORECASE (case-insensitive) and VERBOSE (readable) flags, and provides practical examples to illustrate their application in Python.
 
 
+# WEEK3 
+##day1 
+The keyword def introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented.
+
+The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring. (More about docstrings can be found in the section Documentation Strings.) There are tools which use docstrings to automatically produce online or printed documentation, or to let the user interactively browse through code; it’s good practice to include docstrings in code that you write, so make a habit of it. 
+
+The execution of a function introduces a new symbol table used for the local variables of the function. More precisely, all variable assignments in a function store the value in the local symbol table; whereas variable references first look in the local symbol table, then in the local symbol tables of enclosing functions, then in the global symbol table, and finally in the table of built-in names. Thus, global variables and variables of enclosing functions cannot be directly assigned a value within a function (unless, for global variables, named in a global statement, or, for variables of enclosing functions, named in a nonlocal statement), although they may be referenced. 
+
+The actual parameters (arguments) to a function call are introduced in the local symbol table of the called function when it is called; thus, arguments are passed using call by value (where the value is always an object reference, not the value of the object). 1 When a function calls another function, a new local symbol table is created for that call. 
+
+A function definition introduces the function name in the current symbol table. The value of the function name has a type that is recognized by the interpreter as a user-defined function. This value can be assigned to another name which can then also be used as a function. This serves as a general renaming mechanism.
+
+# MORE LISTS
+
+ list is a built-in data type used to store multiple items. Lists are mutable, which means you can modify their elements after they have been created.
+ ## Creating Lists:
+You can create a list by enclosing a sequence of items inside square brackets [], separated by commas. For example: my_list = [1, 2, 3, 4, 5] 
+
+Lists can contain elements of different data types, including numbers, strings, and even other lists.
+
+# Accessing Elements:
+You can access elements in a list using indexing. Python uses zero-based indexing, meaning the first element is at index 0, the second element at index 1, and so on. Negative indexing allows you to access elements from the end of the list, with -1 representing the last element:
+print(my_list[0])  # Output: 1
+print(my_list[-1]) # Output: 5
+
+
+## Slicing Lists:
+You can extract a portion of a list using slicing. Slicing allows you to create a new list containing elements from a specified start index to an end index (exclusive):
+subset = my_list[1:4] # Creates a new list: [2, 3, 4]
+
+## Modifying Lists:
+Lists are mutable, which means you can change their elements after creation. You can assign new values to specific indices or use methods like append(), insert(), extend(), and remove() to modify lists:
+
+## modifier list.
+my_list[2] = 10       # Modifying an element at index 2
+my_list.append(6)      # Appending a new element to the end of the list
+my_list.insert(2, 7)   # Inserting an element at index 2
+my_list.extend([8, 9]) # Extending the list with another list
+my_list.remove(3)      # Removing the first occurrence of an element
+
+# List Methods:
+Python provides various built-in methods to work with lists. Some commonly used methods include:
+
+len(list): Returns the length of the list.
+list.append(element): Adds an element to the end of the list.
+list.insert(index, element): Inserts an element at the specified index.
+list.extend(iterable): Extends the list by adding elements from an iterable.
+list.remove(element): Removes the first occurrence of the specified element.
+list.pop(index): Removes and returns the element at the specified index.
+list.index(element): Returns the index of the first occurrence of the specified element.
+element in list: Returns True if the element is present in the list, False otherwise.
+
+
+
+
 
 
 
