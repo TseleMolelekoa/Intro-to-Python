@@ -907,17 +907,147 @@ list.pop(index): Removes and returns the element at the specified index.
 list.index(element): Returns the index of the first occurrence of the specified element.
 element in list: Returns True if the element is present in the list, False otherwise.
 
+# Day2
 
+# day 3
 
+# Day4
 
+In Python, classes are used to create objects, which are instances of the class. Classes provide a means of bundling data (attributes) and functionality (methods) together. Here's a basic overview of how classes work in Python:
 
+Defining a Class:
+To define a class, you use the class keyword, followed by the class name and a colon. Class names in Python are typically written in CamelCase.
+Class Constructor and Instance Variables:
+The __init__ method is a special method in Python classes and is used as a constructor. It is called when a new object of the class is instantiated. Instance variables are variables that belong to the object and are defined within the __init__ method using the self keyword.
 
+class MyClass:
+    def __init__(self, var1, var2):
+        self.var1 = var1
+        self.var2 = var2
+        
+## Class Methods:
+Methods are functions defined within a class. They can perform operations on the class's data or provide some functionality related to the class.
 
+class MyClass:
+    def __init__(self, var1, var2):
+        self.var1 = var1
+        self.var2 = var2
+    
+    def display_vars(self):
+        print("Var1:", self.var1)
+        print("Var2:", self.var2)
 
+# Creating an object of the class
+obj = MyClass(10, 20)
+obj.display_vars()
 
+## Inheritance:
+Inheritance allows one class to inherit properties and methods from another class. The derived class (subclass) inherits attributes and behaviors from the base class (superclass).
+class ParentClass:
+    def __init__(self, var1, var2):
+        self.var1 = var1
+        self.var2 = var2
 
+class ChildClass(ParentClass):
+    def __init__(self, var1, var2, var3):
+        super().__init__(var1, var2)
+        self.var3 = var3
 
+ChildClass inherits from ParentClass. The super() function is used to call the constructor of the parent class within the child class.
 
+# Three important principles of object-oriented programming (OOP):
+
+1. Encapsulation:
+Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit known as a class. The data within a class is often kept private to prevent direct access from outside the class. Instead, access to the data is controlled through public methods, also known as getters and setters.
+
+In Python, encapsulation is achieved by using private and public access specifiers. By convention, attributes prefixed with a single underscore (e.g., _variable) are considered protected, and attributes prefixed with double underscores (e.g., __variable) are considered private.
+
+class MyClass:
+    def __init__(self):
+        self._protected_var = 10  # protected variable
+        self.__private_var = 20    # private variable
+
+    def get_private_var(self):
+        return self.__private_var
+
+obj = MyClass()
+print(obj._protected_var)  # Accessing protected variable (not recommended)
+   #print(obj.__private_var)  # This will raise an error (private variable)
+print(obj.get_private_var())  # Accessing private variable through a public method
+
+# 2. Abstraction:
+Abstraction is the process of hiding the complex implementation details and showing only the necessary features of an object. In Python, abstraction is achieved through abstract classes and interfaces. Abstract classes are classes that cannot be instantiated and are meant to be subclassed by other classes. Abstract methods defined in abstract classes must be implemented by their subclasses.
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Square(Shape):
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side * self.side
+
+square_obj = Square(5)
+print(square_obj.area())  # Output: 25
+   #shape_obj = Shape()  # This will raise an error (abstract class cannot be instantiated)
+
+# 3. Polymorphism:
+Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables flexibility and interchangeability of objects, making the code more modular and easier to maintain. Polymorphism is often achieved through method overriding and duck typing in Python.
+Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. This allows objects of different classes to be used interchangeably based on their common interface.
+
+class Animal:
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow!"
+
+def print_animal_sound(animal):
+    print(animal.sound())
+
+dog = Dog()
+cat = Cat()
+
+print_animal_sound(dog)  # Output: Woof!
+print_animal_sound(cat)  # Output: Meow!
+
+In the example above, print_animal_sound() function can accept objects of different classes (Dog and Cat) because they share a common interface (the sound() method). This is an example of polymorphism in action.
+
+These principles of object-oriented programming help in creating more organized, efficient, and maintainable code in Python and many other object-oriented programming languages.
+
+# Python Scopes and Namespaces
+A namespace is a container that holds a set of identifiers (variable names, function names, class names, etc.) and their corresponding objects (values). A scope is a region of the program where a namespace is directly accessible. Understanding scopes and namespaces is crucial for writing Python code that behaves as expected, especially when dealing with variables and functions.
+
+There are several types of namespaces and scopes in Python:
+
+1. Local Namespace/Scope:
+A local namespace is the namespace inside a function.
+It contains local variables, function arguments, and the function's name.
+This namespace is created when the function is called and is destroyed when the function exits.
+Local variables cannot be accessed from outside the function.
+ examples:
+
+def my_function():
+    local_var = 10  # This is a local variable
+    print(local_var)
+
+my_function()
+  # print(local_var)  # This will raise an error because local_var is not accessible here
+  
+2. Enclosing Namespace/Scope (Closure):
+An enclosing namespace is the namespace of the containing (enclosing) function.
+It is accessible from nested functions.
+This allows inner functions to access variables from the outer (enclosing) function.
 
 
 
